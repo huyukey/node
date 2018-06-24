@@ -1,10 +1,12 @@
 const express = require('express');
+const path = require('path');
 const router = express.Router();
 const roads = require('../model/roads');
 
 router.get('/admin/updateRoadDB', updateRoadDB);
 
 router.get('/', index);
+router.get('/community', community);
 
 router.get('/roads', showRoadList);
 router.get('/road/:roadId', showRoadDetail);
@@ -17,7 +19,11 @@ function updateRoadDB() {
 }
 
 function index(req, res) {
-    res.sendFile(__dirname + '/view/index.html');
+    res.sendFile(path.resolve('view/index.html'));
+}
+
+function community(req, res) {
+    res.sendFile(path.resolve('view/chat.html'))
 }
 
 
