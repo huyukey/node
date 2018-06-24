@@ -17,7 +17,7 @@ function updateRoadDB() {
 }
 
 function index(req, res) {
-    res.sendFile(__dirname + '../view/index.html');
+    res.sendFile(__dirname + 'view/index.html');
 }
 
 
