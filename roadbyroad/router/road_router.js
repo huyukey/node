@@ -12,6 +12,10 @@ router.get('/findRoad/:roadName', showRoadDetail);
 
 module.exports = router;
 
+function updateRoadDB() {
+    console.log('update DB');
+}
+
 function index(req, res) {
     res.sendFile(__dirname + '../view/index.html');
 }
