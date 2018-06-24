@@ -5,7 +5,6 @@ const roads = require('../model/roads');
 router.get('/admin/updateRoadDB', updateRoadDB);
 
 router.get('/', index);
-app.use('/resources', express.static(__dirname + '/resources'));
 
 router.get('/roads', showRoadList);
 router.get('/road/:roadId', showRoadDetail);
@@ -18,7 +17,7 @@ function updateRoadDB() {
 }
 
 function index(req, res) {
-    res.sendFile(__dirname + '/../view/index.html');
+    res.sendFile(__dirname + '/view/index.html');
 }
 
 
