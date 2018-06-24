@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no">
+  
+  <link rel="shortcut icon" href="resources/images/logo/favicon-64.png">
+
+  <link rel="stylesheet" href="resources/static/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="resources/static/mCSB/jquery.mCustomScrollbar.css">
+  <link rel="stylesheet" href="resources/css/style.css">
+
+  <title>로드x로드</title>
+</head>
+
+<body>
+    
+    <div id="roadbyroad-frame" class="wrapper">
+        <!-- ================ 제목 표시줄 ================ -->
+        <header id="titleBar" class="title-bar">
+            <h3>로드 × 로드</h3>
+            <nav class="nav-menu">
+                <ul>
+                    <li class="active">
+                        <a href="">서울 자전거길</a>
+                    </li>
+                    <li>
+                        <a href="community">커뮤니티</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- ================ 페이지 ================ -->
+
+        <div id="main-page" class="page d-none">
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane show active" id="mainpage_tab-rs" role="tabpanel" aria-labelledby="nav-home-tab">
+                    
+                    
+                </div>
+            </div>
+        </div>
+
+        <div id="global-toast" class="alert d-none" role="alert">
+            <div class="message-wrap">
+                <div class="icon-area">1
+                        <!-- <img src="img/icon-danger-white.png"
+                        srcset="img/icon-danger-white@2x.png 2x,
+                                img/icon-danger-white@3x.png 3x"
+                        class="icon_danger_white"> -->
+                    <i class="icon-warning"></i>
+                </div>
+                <div class="message-area">
+                    <p>이메일로 임시 비밀번호가 전송되었습니다.<br>임시 비밀번호를 입력해주세요.</p>
+                </div>
+            </div>
+        </div><!-- global-toast end --> 
+        
+        <!-- Global Alert Modal (Await) -->
+        <div class="modal fade show" id="alertModal" tabindex="-1" role="dialog" aria-labelledby="alertModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="alertModalLabel"></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" data-target="#alertModal">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="alert-content">
+                            <p></p>
+                        </div>
+
+                        <div class="button-group text-center">
+                            <button type="button" class="btn-zeron btn-zeron cancel" data-target="#alertModal" data-cancel="false">취소</button>
+                            <button type="button" class="btn-zeron btn-zeron-re" data-toggle="modal" data-target="#alertModal" >확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- alert modal end -->
+
+        
+        
+    </div><!-- -frame end -->
+    <div class="main-spiner page ">
+        <div class="loader"></div>
+        <h3>로딩중 입니다...</h3>
+    </div>
+    
+
+    <!-- jQuery, Bootstrap -->
+  <script src="resources/static/jquery/jquery-3.3.1.min.js"></script>
+  <script src="resources/static/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Plugin -->
+  <script src="resources/static/mCSB/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- fontawesome -->
+  <script src="resources/static/fontawesome/js/fontawesome-all.js"></script>
+    <!-- vue -->
+  <!-- <script src="static/vue/vue.min.js"></script> -->
+  <script src="resources/static/vue/vue.js"></script>
+    <!-- handler -->
+  <script src="resources/js/main.js"></script>
+
+<script>
+    (function($){
+        $(window).on('load', function() {
+            $('.vt-scroll').mCustomScrollbar({
+                axis: 'y',
+                theme: 'minimal-dark',
+            });
+
+            $('.main-spiner').addClass('d-none');
+            $('#main-page').hide().removeClass('d-none').fadeIn(2000);
+            });
+
+    })(jQuery);
+
+
+    $(document).ready(function() {
+        
+    })
+
+</script>
+    
+</body>
+
+</html>
